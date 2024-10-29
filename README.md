@@ -5,7 +5,7 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/vitorlnm/ReactNative-ShoppingCart?style=for-the-badge)
 ![Badge Aviso](https://img.shields.io/static/v1?label=Count%20Commits&message=5&color=6A5ACD&style=for-the-badge)
 
-<img src="https://cdn.discordapp.com/attachments/1204827550946168884/1299530634464854026/React_native.png?ex=671d89b7&is=671c3837&hm=648f9230f84a7cb64a8c55583e96c43a6703a32b07d8a75e1926ba874a347816&" alt="React Native">
+<img src="https://images.pexels.com/photos/4968391/pexels-photo-4968391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="React Native">
 
 > - Application developed in class to evaluate the subject "UC15 - React Native" of the Bilingual Systems Development Technician course, at SENAC - São Leopoldo.
 
