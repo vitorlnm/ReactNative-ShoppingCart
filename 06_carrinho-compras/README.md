@@ -1,49 +1,62 @@
-# Shoppis
+# 💻 Shopping Cart (Expo App)
 
-Repositório com material base para avaliação da disciplina UC 15 - React Native do curso TDS do Senac - São Leopoldo
+![GitHub repo size](https://img.shields.io/github/repo-size/vitorlnm/ReactNative-ShoppingCart?style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=Working&color=DAA520&style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/vitorlnm/ReactNative-ShoppingCart?style=for-the-badge)
+![Badge Aviso](https://img.shields.io/static/v1?label=Count%20Commits&message=5&color=6A5ACD&style=for-the-badge)
 
-## Bibliotecas utilizadas
+<img src="https://images.pexels.com/photos/4968391/pexels-photo-4968391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="React Native">
 
-As bibliotecas listadas abaixo já estão inseridas no package.json
+> - Application developed in class to evaluate the subject "UC15 - React Native" of the Bilingual Systems Development Technician course, at SENAC - São Leopoldo.
 
-- [Expo](https://expo.dev/)
-- [Axios](https://axios-http.com/ptbr/docs/intro)
-- [Async Storage](https://react-native-async-storage.github.io/async-storage/docs/install/)
-- [React Navigation](https://reactnavigation.org/)
-- [SafeAreaContext](https://www.npmjs.com/package/react-native-safe-area-context)
-- [RootToast](https://github.com/magicismight/react-native-root-toast)
-- [Typescript](https://www.typescriptlang.org/)
+### ⌛ | Tasks and Challenges
+- [x] Use markup techniques (HTML) and style (CSS) according to W3C good practice requirements.
+- [x] Install and use content management tools – Content Management System (CMS) on web servers in accordance with technical guidelines;
+- [x] Customize websites using CMS tools;
+- [x] Creates websites in accordance with the usability, accessibility and information architecture standards defined by W3C;
+- [x] Uses frameworks to build the responsive website according to the technical guidelines of the framework used.
+- [ ] Uses tools to publish websites on local and/or remote servers in accordance with technical guidelines;
+- [ ] Prepares the user manual for the web software project developed in accordance with technical guidance;
 
-## API consumida
+### 🚀 | Installing the project
 
-- [FakeStore API](https://fakestoreapi.com/docs) para a lista de produtos
-- [Me Live Code](https://www.melivecode.com) para o login
+To install the `Shopping Cart` application, follow these steps:
 
-## Instruções
+In GitBash:
 
-- Este repositório contém os principais componentes do app.
-- Ficará de sua responsabilidade a criação das telas e de seus componentes e também da lógica de exclusão de itens do carrinho no CartContext.
-- O passo final será a geração do bundle e apk para publicação em app stores de acordo com as orientações constantes no material da aula: [Deploy](https://drive.google.com/file/d/1LGnrX3LrZVDVczx5jcOftjU6b8WqpYq2/view?usp=drive_link)
+```
+git clone https://github.com/vitorlnm/ReactNative-ShoppingCart.git
+```
+## 🤝 Collaborators
 
-## Material de Apoio
+<table>
+  <tr>
+    <td align="center">
+      <a href="#" title="Rafael Kasper">
+        <img src="https://avatars.githubusercontent.com/u/42684330?v=4" width="100px;" alt="Rafael Kasper"/><br>
+        <sub>
+          <b>Rafael Kasper - Teacher</b>
+        </sub>
+      </a>
+    </td>
 
-- Você poderá se basear neste layout do Figma: [App de E-commerce](https://www.figma.com/design/JC26On7yCYQnheg06ccN63/Ecomerce?node-id=1-61&m=dev&t=MjZKtJWY12Nv0fXG-1)
+  <td align="center">
+      <a href="#" title="Vitor Gabriel">
+        <img src="https://avatars.githubusercontent.com/u/79713907?v=4" width="100px;" alt="Vitor Gabriel"/><br>
+        <sub>
+          <b>Vitor Gabriel - Developer 1</b>
+        </sub>
+      </a>
+    </td>
 
-## Avaliação
+<td align="center">
+      <a href="#" title="Renan Bernardo">
+        <img src="https://cdn.discordapp.com/attachments/1204827550946168884/1299534491320320081/412695563_1429922514263509_8172059649901029130_n.png?ex=671d8d4e&is=671c3bce&hm=1820d12bb760755f715c4177039a19f66acfa9feeabb055846a94ac298a3fe1f&" width="100px;" alt="Renan Bernardo"/><br>
+        <sub>
+          <b>Renan Bernardo - Developer 2</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
 
-Neste trabalho serão avaliados os seguintes indicadores do plano do curso:
-
-1. Utiliza técnicas de marcação (HTML) e estilo (CSS) conforme requisitos de boas práticas da W3C.
-2. Instala e utiliza ferramentas de gerenciamento de conteúdo – Content Management System (CMS) nos servidores web de acordo com orientações técnicas;
-3. Customiza sites utilizando ferramentas CMS;
-4. Cria sites conforme os padrões de usabilidade, acessibilidade e arquitetura da informação definidos pelo W3C;
-5. Utiliza frameworks para construção do site responsivo conforme orientações técnicas do framework utilizado.
-6. Utiliza ferramentas para publicar website em servidores locais e/ou remotos conforme orientações técnicas;
-7. Elabora o manual de utilização do projeto de software web desenvolvido conforme a orientação técnica;
-
-## Entrega
-
-- Envie suas alterações para um repositório no Github. O repositório deve conter:
-  - O código do app
-  - Um README explicando as funcionalidades do app, com imagens
-  - O bundle e o apk gerados no deploy
+</table>
