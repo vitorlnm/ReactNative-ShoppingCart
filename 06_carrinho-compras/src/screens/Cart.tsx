@@ -23,55 +23,69 @@ const Cart = () => {
       .toFixed(2);
   };
 
+  const isCartEmpty = cart.length === 0;
+
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.container}>
-        {cart.map((item) => (
-          <View key={item.product.id} style={styles.cartItem}>
-            <Text style={styles.title}>{item.product.title}</Text>
-            <Text style={styles.price}>R$ {item.product.price.toFixed(2)}</Text>
+        {isCartEmpty ? (
+          <Text style={styles.emptyCartText}>Seu carrinho está vazio.</Text>
+        ) : (
+          cart.map((item) => (
+            <View key={item.product.id} style={styles.cartItem}>
+              <Text style={styles.title}>{item.product.title}</Text>
+              <Text style={styles.price}>R$ {item.product.price.toFixed(2)}</Text>
 
-            <View style={styles.quantityContainer}>
+              <View style={styles.quantityContainer}>
+                <TouchableOpacity
+                  style={styles.quantityButton}
+                  onPress={() => item.quantity > 1 && addProduct(item.product, -1)}
+                >
+                  <Text style={styles.quantityButtonText}>-</Text>
+                </TouchableOpacity>
+                <TextInput
+                  style={styles.quantityInput}
+                  value={item.quantity.toString()}
+                  keyboardType="numeric"
+                  editable={false}
+                />
+                <TouchableOpacity
+                  style={styles.quantityButton}
+                  onPress={() => addProduct(item.product, 1)}
+                >
+                  <Text style={styles.quantityButtonText}>+</Text>
+                </TouchableOpacity>
+              </View>
+
               <TouchableOpacity
-                style={styles.quantityButton}
-                onPress={() => item.quantity > 1 && addProduct(item.product, -1)}
+                style={styles.removeButton}
+                onPress={() => removeProduct(item.product.id)}
               >
-                <Text style={styles.quantityButtonText}>-</Text>
-              </TouchableOpacity>
-              <TextInput
-                style={styles.quantityInput}
-                value={item.quantity.toString()}
-                keyboardType="numeric"
-                editable={false}
-              />
-              <TouchableOpacity
-                style={styles.quantityButton}
-                onPress={() => addProduct(item.product, 1)}
-              >
-                <Text style={styles.quantityButtonText}>+</Text>
+                <Text style={styles.removeButtonText}>Remover</Text>
               </TouchableOpacity>
             </View>
+          ))
+        )}
 
-            <TouchableOpacity
-              style={styles.removeButton}
-              onPress={() => removeProduct(item.product.id)}
-            >
-              <Text style={styles.removeButtonText}>Remover</Text>
-            </TouchableOpacity>
+        {!isCartEmpty && (
+          <View style={styles.totalContainer}>
+            <Text style={styles.totalText}>Total: R$ {calculateTotal()}</Text>
           </View>
-        ))}
-
-        <View style={styles.totalContainer}>
-          <Text style={styles.totalText}>Total: R$ {calculateTotal()}</Text>
-        </View>
+        )}
 
         <TouchableOpacity
-          style={styles.orderButton}
+          style={[
+            styles.orderButton,
+            isCartEmpty && styles.disabledOrderButton,
+          ]}
           onPress={() =>
-            navigation.navigate("Payment", { total: calculateTotal() })
+            !isCartEmpty && navigation.navigate("Payment", { total: calculateTotal() })
           }
+          disabled={isCartEmpty}
         >
-          <Text style={styles.orderButtonText}>Fazer Pedido</Text>
+          <Text style={styles.orderButtonText}>
+            {isCartEmpty ? "Carrinho Vazio" : "Fazer Pedido"}
+          </Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -89,6 +103,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
+  },
+  emptyCartText: {
+    fontSize: 16,
+    color: "#333",
+    marginTop: 20,
+    fontWeight: "400",
+    textAlign: "center",
   },
   cartItem: {
     width: "90%",
@@ -186,6 +207,9 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 8,
+  },
+  disabledOrderButton: {
+    backgroundColor: "#ccc",
   },
   orderButtonText: {
     color: "#fff",
