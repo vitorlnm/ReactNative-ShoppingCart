@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   View,
   Text,
+  ActivityIndicator,
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { ProductDTO } from "../types/Product";
@@ -35,7 +36,12 @@ const ProductList = () => {
   }, []);
 
   if (loading) {
-    return <Text style={styles.loadingText}>Carregando...</Text>;
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#6A0DAD" />
+        <Text style={styles.loadingText}>Carregando...</Text>
+      </View>
+    );
   }
 
   return (
@@ -52,6 +58,7 @@ const ProductList = () => {
           <ProductCard item={item} />
         </TouchableOpacity>
       )}
+      contentContainerStyle={styles.listContainer}
     />
   );
 };
@@ -59,13 +66,33 @@ const ProductList = () => {
 export default ProductList;
 
 const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f5f5f5",
+  },
   loadingText: {
-    textAlign: "center",
-    marginTop: 20,
-    fontSize: 18,
-    color: "#888",
+    marginTop: 10,
+    fontSize: 20,
+    color: "#6A0DAD",
   },
   cardContainer: {
-    paddingHorizontal: 16,
+    backgroundColor: "#FFF",
+    borderRadius: 15,
+    marginVertical: 10,
+    padding: 16,
+    shadowColor: "#6A0DAD",
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+    elevation: 8,
+    width: "90%",
+    alignSelf: "center",
+    borderLeftWidth: 4,
+    borderLeftColor: "#6A0DAD",
+  },
+  listContainer: {
+    paddingVertical: 20,
   },
 });

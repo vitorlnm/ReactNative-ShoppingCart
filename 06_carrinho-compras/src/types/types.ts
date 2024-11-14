@@ -4,7 +4,7 @@ export type RootStackParamList = {
   ProductList: undefined;
   ProductDetails: { product: ProductDTO };
   Cart: undefined;
-  Payment: undefined;
+  Payment: { total: string };
   OrderStatus: undefined;
   UserInfo: undefined;
 };

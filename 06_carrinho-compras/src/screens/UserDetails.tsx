@@ -1,12 +1,12 @@
-import { StyleSheet, Text, View, Button, Image } from "react-native";
 import React from "react";
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from "react-native";
 import { useUserContext } from "../contexts/UserContext";
 
 const UserDetails = () => {
   const { userData, handleLogout } = useUserContext();
 
   return (
-    <View style={styles.screen}>
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.container}>
         <Image
           style={styles.avatar}
@@ -18,53 +18,66 @@ const UserDetails = () => {
           {userData?.user.fname ?? ""} {userData?.user.lname ?? ""}
         </Text>
         <Text style={styles.email}>{userData?.user.email ?? ""}</Text>
-        <View style={styles.buttonContainer}>
-          <Button onPress={handleLogout} title="Sair" color="#333" />
-        </View>
+        <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
+          <Text style={styles.logoutButtonText}>Sair</Text>
+        </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
 export default UserDetails;
 
 const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
+  scrollContainer: {
+    flexGrow: 1,
     justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#f5f5f5",  // Fundo suave para destacar o cartão branco
+    backgroundColor: "#f5f5f5",
   },
   container: {
-    backgroundColor: "#fff",
-    padding: 40,
-    margin: 20,
-    borderRadius: 12,
     alignItems: "center",
-    shadowColor: "#000",
-    shadowOpacity: 0.2,
-    shadowRadius: 10,
+    padding: 20,
+    backgroundColor: "#ffffff",
+    borderRadius: 16,
+    margin: 20,
+    shadowColor: "#6A0DAD",
     shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 10,
   },
   avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 15,
+    width: 140,
+    height: 140,
+    borderRadius: 70,
+    marginBottom: 20,
+    borderWidth: 3,
+    borderColor: "#6A0DAD",
   },
   name: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#333",
-    marginBottom: 5,
+    fontSize: 28,
+    fontWeight: "700",
+    color: "#6A0DAD",
+    marginBottom: 10,
+    textAlign: "center",
   },
   email: {
-    fontSize: 16,
-    color: "#555",
-    marginBottom: 20,
+    fontSize: 18,
+    color: "#6A0DAD",
+    opacity: 0.7,
+    marginBottom: 25,
+    textAlign: "center",
   },
-  buttonContainer: {
-    width: "80%",
-    marginTop: 10,
+  logoutButton: {
+    backgroundColor: "#6A0DAD",
+    paddingVertical: 14,
+    paddingHorizontal: 50,
+    borderRadius: 30,
+    alignItems: "center",
+  },
+  logoutButtonText: {
+    color: "#fff",
+    fontSize: 20,
+    fontWeight: "bold",
   },
 });

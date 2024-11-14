@@ -1,17 +1,17 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
 import { ProductDTO } from "../types/Product";
 
-interface CardProps {
+type ProductCardProps = {
   item: ProductDTO;
-}
+};
 
-const ProductCard = ({ item }: CardProps) => {
+const ProductCard = ({ item }: ProductCardProps) => {
   return (
-    <View style={styles.item}>
+    <View style={styles.card}>
       <Image source={{ uri: item.image }} style={styles.image} />
       <Text style={styles.title}>{item.title}</Text>
-      <Text style={styles.price}>${item.price}</Text>
+      <Text style={styles.price}>R$ {item.price.toFixed(2)}</Text>
     </View>
   );
 };
@@ -19,34 +19,25 @@ const ProductCard = ({ item }: CardProps) => {
 export default ProductCard;
 
 const styles = StyleSheet.create({
-  item: {
-    backgroundColor: "#ff",
-    padding: 25,
-    marginVertical: 10,
-    marginHorizontal: 20,
-    borderRadius: 12,
+  card: {
     alignItems: "center",
-    shadowColor: "#000",
-    shadowOpacity: 0.3,
-    shadowRadius: 10,
-    shadowOffset: { width: 0, height: 2 },
+    backgroundColor: "transparent", 
   },
   image: {
-    width: 120,
-    height: 120,
-    marginBottom: 12,
-    borderRadius: 8,
+    width: 150,
+    height: 150,
+    resizeMode: "contain", 
+    backgroundColor: "transparent", 
   },
   title: {
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: "bold",
-    color: "#00",
     textAlign: "center",
-    marginBottom: 8,
+    marginTop: 8,
   },
   price: {
-    fontSize: 18,
-    fontWeight: 300,
-    color: "#00",
+    fontSize: 14,
+    color: "#888",
+    marginTop: 4,
   },
 });

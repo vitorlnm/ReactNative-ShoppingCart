@@ -8,8 +8,9 @@ import OrderStatus from "../screens/OrderStatus";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import UserDetails from "../screens/UserDetails";
 import MenuHeader from "../components/MenuHeader";
+import { RootStackParamList } from "../types/types";
 
-const ProductStack = createNativeStackNavigator();
+const ProductStack = createNativeStackNavigator<RootStackParamList>();
 
 const ProductRoutes = () => {
   return (
@@ -38,7 +39,7 @@ const ProductRoutes = () => {
   );
 };
 
-const CartStack = createNativeStackNavigator();
+const CartStack = createNativeStackNavigator<RootStackParamList>();
 
 const CartRoutes = () => {
   return (
