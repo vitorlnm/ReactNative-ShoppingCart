@@ -3,16 +3,63 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/vitorlnm/ReactNative-ShoppingCart?style=for-the-badge)
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=FINISHED&color=7CFC00&style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/vitorlnm/ReactNative-ShoppingCart?style=for-the-badge)
-![Badge Aviso](https://img.shields.io/static/v1?label=Count%20Commits&message=5&color=6A5ACD&style=for-the-badge)
+![Badge Aviso](https://img.shields.io/static/v1?label=Count%20Commits&message=10&color=6A5ACD&style=for-the-badge)
 
 <img src="https://images.pexels.com/photos/4968391/pexels-photo-4968391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="React Native">
 
-> - Application developed in class to evaluate the subject "UC15 - React Native" of the Bilingual Systems Development Technician course, at SENAC - São Leopoldo.
+> - This project is a web and mobile application focused on shopping cart functionality, including a payment interface and delivery tracking. It allows users to select products, add them to the cart, enter payment details, and finalize the purchase. Application developed in class to evaluate the subject "UC15 - React Native" of the Bilingual Systems Development Technician course, at SENAC - São Leopoldo.
 
-### ⌛ | About the project
-- This project focuses on web development and mobile app implementation. It includes using HTML and CSS according to W3C best practices, installing and customizing CMS tools, and ensuring websites meet usability, accessibility, and responsive design standards. It also involves publishing websites on local or remote servers and preparing a user manual.
+### 📋 | Key Features
 
-- For the app, the tasks include creating user screens with avatar, name, and logout button, a payment screen with address and card details, and shopping cart removal functionality with a confirmation alert. The app should be styled, and the APK generated for app store publication.
+- **Add and Remove Items:** Users can add products to the cart, modify quantities, and remove items with confirmation alerts.
+Price Calculation: The total price is automatically calculated based on the selected items and quantities in the cart.
+
+- **Payment Details:** Users can input card details (card number, expiration date, CVV), which are formatted automatically for easy entry.
+
+- **Local Storage for Cart:** The shopping cart data is stored using local storage (for web) or AsyncStorage (for mobile), ensuring persistence across sessions.
+
+- **Order Confirmation:** After payment confirmation, users see a success message, the cart is cleared, and they are redirected to the home screen.
+
+- **Order History:** Users can view their order history and check the delivery status of past orders.
+
+- **Responsive Design:** The app is optimized for both web and mobile platforms, ensuring usability across devices.
+
+### 📝 | How to Use
+
+1. **Choosing a Product**
+Upon opening the app, you will be presented with a list of available products. Click on a product to view its details, including description, price, and any available options.
+
+2. **Adding to Cart**
+On the product detail page, select the quantity you wish to purchase and click the “Add to Cart” button. After adding, you’ll be redirected to the cart screen.
+
+3. **Viewing the Cart**
+You can access the cart anytime by clicking the cart icon located in the upper right corner. The cart displays added products, their quantities, and the total amount.
+
+4. **Checkout Process**
+Click the “Proceed to Checkout” button on the cart screen to begin the payment process. You will be redirected to the payment page.
+
+5. **Entering Payment Details**
+On the payment screen, fill in your payment details (credit card number, expiration date, CVV) and shipping address. Double-check your order summary and click “Confirm Payment” to finalize the transaction.
+
+6. **Completing the Purchase**
+Once payment is confirmed, you’ll receive a success message, along with a summary of your order. You can track the order status in the "Order History" section.
+
+### 📂 | Project Structure
+
+- Components/ `Reusable UI components (e.g., product card, cart item)` 
+- Contexts/ `Global state management (e.g., for cart data)` 
+- Screens/  `Different app screens (e.g., Home, Cart, Payment)` 
+- Utils/  `Helper functions (e.g., price calculation, payment validation)` 
+- Assets/  `Images, icons, and static resources` 
+- App.js  `Main application entry point` 
+
+### 🛠️ | Technologies Used
+
+- [X] HTML/CSS: For styling and ensuring responsiveness according to best practices.
+- [X] JavaScript/React: For building the app's functionality and managing state.
+- [X] CMS Tools: For managing content and product listings.
+- [X] Local/Remote Servers: Websites are hosted locally or remotely as per project requirements.
+- [X] User Manual: A manual is provided for users to understand how to navigate the app.
 
 ### 🚀 | Installing the project
 
@@ -23,6 +70,23 @@ In GitBash:
 ```
 git clone https://github.com/vitorlnm/ReactNative-ShoppingCart.git
 ```
+
+```
+cd /ReactNative-ShoppingCart.git
+```
+
+```
+npm install
+```
+
+```
+npx expo --tunnel
+```
+
+### 📦 | APK Generation (for Mobile)
+
+- For generating the APK to submit to app stores, follow the instructions to build your app using React Native tools or Expo, depending on the platform chosen for mobile development.
+
 ## 🤝 Collaborators
 
 <table>
