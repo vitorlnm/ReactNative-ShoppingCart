@@ -83,9 +83,28 @@ npm install
 npx expo --tunnel
 ```
 
-### 📦 | APK Generation (for Mobile)
+### 🖼️ | Examples
 
-- For generating the APK to submit to app stores, follow the instructions to build your app using React Native tools or Expo, depending on the platform chosen for mobile development.
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <p>Product List</p>
+      <img src="./assets/productlist.png" alt="Product List" height="620">
+    </td>
+    <td style="text-align: center;">
+      <p>Shopping Cart</p>
+      <img src="./assets/cart.png" alt="Cart" height="620">
+    </td>
+    <td style="text-align: center;">
+      <p>Payment Session</p>
+      <img src="./assets/payment.png" alt="Payment" height="620">
+    </td>
+  <td style="text-align: center;">
+      <p>Order Completion</p>
+      <img src="./assets/screen.png" alt="Order Completion" height="620">
+    </td>
+  </tr>
+</table>
 
 ## 🤝 Collaborators
 
