@@ -1,6 +1,6 @@
 # 💻 Shopping Cart (Expo App)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/vitorlnm/ReactNative-ShoppingCart?style=for-the-badge)
+![Badge Aviso](https://img.shields.io/static/v1?label=REPO%20SIZE&message=307%20MB&color=1E90FF&style=for-the-badge)
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=FINISHED&color=7CFC00&style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/vitorlnm/ReactNative-ShoppingCart?style=for-the-badge)
 ![Badge Aviso](https://img.shields.io/static/v1?label=Count%20Commits&message=10&color=6A5ACD&style=for-the-badge)
