@@ -1,7 +1,7 @@
 # 💻 Shopping Cart (Expo App)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/vitorlnm/ReactNative-ShoppingCart?style=for-the-badge)
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=Working&color=DAA520&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=FINISHED&color=7CFC00&style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/vitorlnm/ReactNative-ShoppingCart?style=for-the-badge)
 ![Badge Aviso](https://img.shields.io/static/v1?label=Count%20Commits&message=5&color=6A5ACD&style=for-the-badge)
 
@@ -9,14 +9,10 @@
 
 > - Application developed in class to evaluate the subject "UC15 - React Native" of the Bilingual Systems Development Technician course, at SENAC - São Leopoldo.
 
-### ⌛ | Tasks and Challenges
-- [x] Use markup techniques (HTML) and style (CSS) according to W3C good practice requirements.
-- [x] Install and use content management tools – Content Management System (CMS) on web servers in accordance with technical guidelines;
-- [x] Customize websites using CMS tools;
-- [x] Creates websites in accordance with the usability, accessibility and information architecture standards defined by W3C;
-- [x] Uses frameworks to build the responsive website according to the technical guidelines of the framework used.
-- [ ] Uses tools to publish websites on local and/or remote servers in accordance with technical guidelines;
-- [ ] Prepares the user manual for the web software project developed in accordance with technical guidance;
+### ⌛ | About the project
+- This project focuses on web development and mobile app implementation. It includes using HTML and CSS according to W3C best practices, installing and customizing CMS tools, and ensuring websites meet usability, accessibility, and responsive design standards. It also involves publishing websites on local or remote servers and preparing a user manual.
+
+- For the app, the tasks include creating user screens with avatar, name, and logout button, a payment screen with address and card details, and shopping cart removal functionality with a confirmation alert. The app should be styled, and the APK generated for app store publication.
 
 ### 🚀 | Installing the project
 
