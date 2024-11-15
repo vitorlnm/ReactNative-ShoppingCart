@@ -44,6 +44,29 @@ On the payment screen, fill in your payment details (credit card number, expirat
 6. **Completing the Purchase**
 Once payment is confirmed, you’ll receive a success message, along with a summary of your order. You can track the order status in the "Order History" section.
 
+### 🖼️ | Interface example
+
+<table>
+  <tr>
+    <td align="center">
+      <p><b>1.</b> Product List</p>
+      <img src="./assets/productlist.png" alt="Product List" height="450">
+    </td>
+    <td align="center">
+      <p><b>2.</b> Shopping Cart</p>
+      <img src="./assets/cart.png" alt="Cart" height="450">
+    </td>
+    <td align="center">
+      <p><b>3.</b> Payment Session</p>
+      <img src="./assets/payment.png" alt="Payment" height="450">
+    </td>
+  <td align="center">
+      <p><b>4.</b> Order Completion</p>
+      <img src="./assets/screen.png" alt="Order Completion" height="450">
+    </td>
+  </tr>
+</table>
+
 ### 📂 | Project Structure
 
 - Components/ `Reusable UI components (e.g., product card, cart item)` 
@@ -82,29 +105,6 @@ npm install
 ```
 npx expo --tunnel
 ```
-
-### 🖼️ | Examples
-
-<table>
-  <tr>
-    <td style="text-align: center;">
-      <p>Product List</p>
-      <img src="./assets/productlist.png" alt="Product List" height="620">
-    </td>
-    <td style="text-align: center;">
-      <p>Shopping Cart</p>
-      <img src="./assets/cart.png" alt="Cart" height="620">
-    </td>
-    <td style="text-align: center;">
-      <p>Payment Session</p>
-      <img src="./assets/payment.png" alt="Payment" height="620">
-    </td>
-  <td style="text-align: center;">
-      <p>Order Completion</p>
-      <img src="./assets/screen.png" alt="Order Completion" height="620">
-    </td>
-  </tr>
-</table>
 
 ## 🤝 Collaborators
 
